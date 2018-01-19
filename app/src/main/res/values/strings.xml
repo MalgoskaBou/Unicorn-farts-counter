@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Unicorn farts counter</string>
+
+    <string name="unicornName1">HAPPY</string>
+    <string name="unicornName2">LUCKY</string>
+    <string name="beginCounting">0</string>
+</resources>
