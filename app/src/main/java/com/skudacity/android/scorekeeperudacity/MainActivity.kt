@@ -1,16 +1,21 @@
 package com.skudacity.android.scorekeeperudacity
 
+import android.content.Context
 import android.media.MediaPlayer
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.github.florent37.viewanimator.ViewAnimator
 import kotlinx.android.synthetic.main.activity_main.*
+import android.os.Vibrator
 
 
+
+@Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
 
     var mMediaPlayer: MediaPlayer? = null
+    var vibe: Vibrator? = null
     var pointsForUnorn1 = 0
     var pointsForUnorn2 = 0
 
@@ -18,6 +23,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        vibe = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
 
     }
 
@@ -27,9 +34,11 @@ class MainActivity : AppCompatActivity() {
                 .animate(view)
                 .translationY(0f, -1000f)
                 .alpha(1f,0f)
-                .scale(0.8f,1f)
+                .scale(0.8f,1.5f)
                 .duration(2000)
                 .start()
+
+        vibe!!.vibrate(100)
 
         if(mMediaPlayer!=null){
             mMediaPlayer!!.release()

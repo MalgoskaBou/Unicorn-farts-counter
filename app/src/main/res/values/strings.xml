@@ -4,4 +4,8 @@
     <string name="unicornName1">HAPPY</string>
     <string name="unicornName2">LUCKY</string>
     <string name="beginCounting">0</string>
+
+    <string name="jeden">+1</string>
+    <string name="dwa">+2</string>
+
 </resources>
