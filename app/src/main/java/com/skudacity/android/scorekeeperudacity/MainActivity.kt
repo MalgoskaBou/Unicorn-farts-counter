@@ -14,10 +14,10 @@ import android.os.Vibrator
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
 
-    var mMediaPlayer: MediaPlayer? = null
-    var vibe: Vibrator? = null
-    var pointsForUnornL = 0
-    var pointsForUnornR = 0
+    private var mMediaPlayer: MediaPlayer? = null
+    private var vibe: Vibrator? = null
+    private var pointsForUnornL = 0
+    private var pointsForUnornR = 0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
