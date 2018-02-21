@@ -16,8 +16,8 @@ class MainActivity : AppCompatActivity() {
 
     var mMediaPlayer: MediaPlayer? = null
     var vibe: Vibrator? = null
-    var pointsForUnorn1 = 0
-    var pointsForUnorn2 = 0
+    var pointsForUnornL = 0
+    var pointsForUnornR = 0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         vibe = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+        mMediaPlayer = MediaPlayer.create(this, R.raw.fart_sound_effect)
 
     }
 
@@ -39,53 +40,48 @@ class MainActivity : AppCompatActivity() {
                 .start()
 
         vibe!!.vibrate(100)
-
-        if(mMediaPlayer!=null){
-            mMediaPlayer!!.release()
-        }
-        mMediaPlayer = MediaPlayer.create(this, R.raw.fart_sound_effect)
         mMediaPlayer!!.start()
     }
 
 
-    fun puffFart1Unicor1(view: View) {
+    fun puffFartUnicorL(view: View) {
 
-        pointsForUnorn1++
-        pointsUnicornL.setText(pointsForUnorn1.toString())
+        if(view.id == addOneToUnicornL.id)
+        {
+            pointsForUnornL++
+            pointsUnicornL.setText(pointsForUnornL.toString())
+        }
+        else if(view.id == addTwoToUnicornL.id)
+        {
+            pointsForUnornL = pointsForUnornL +2
+            pointsUnicornL.setText(pointsForUnornL.toString())
+        }
         effects(fartL)
 
     }
-    fun puffFart2Unicor1(view: View) {
-
-        pointsForUnorn1 = pointsForUnorn1+2
-        pointsUnicornL.setText(pointsForUnorn1.toString())
-        effects(fartL)
-
-    }
 
 
-    fun puffFart2Unicor2(view: View) {
+    fun puffFartUnicorR(view: View) {
 
-        pointsForUnorn2 = pointsForUnorn2+2
-        pointsUnicornR.setText(pointsForUnorn2.toString())
+        if(view.id == addOneToUnicornR.id) {
+            pointsForUnornR = pointsForUnornR + 2
+            pointsUnicornR.setText(pointsForUnornR.toString())
+        }
+        else if(view.id == addTwoToUnicornR.id){
+            pointsForUnornR++
+            pointsUnicornR.setText(pointsForUnornR.toString())
+        }
         effects(fartR)
 
     }
 
-    fun puffFart1Unicor2(view: View) {
-
-        pointsForUnorn2++
-        pointsUnicornR.setText(pointsForUnorn2.toString())
-        effects(fartR)
-
-    }
 
     fun resetBtn(view: View) {
 
-        pointsForUnorn2 = 0
-        pointsForUnorn1 = 0
-        pointsUnicornR.setText(pointsForUnorn1.toString())
-        pointsUnicornL.setText(pointsForUnorn2.toString())
+        pointsForUnornR = 0
+        pointsForUnornL = 0
+        pointsUnicornR.setText(pointsForUnornL.toString())
+        pointsUnicornL.setText(pointsForUnornR.toString())
 
 
     }

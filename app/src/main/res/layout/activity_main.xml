@@ -76,7 +76,7 @@
         android:layout_marginStart="@dimen/standardMargins"
         style="@style/rainbowButton"
 
-        android:onClick="puffFart1Unicor1"
+        android:onClick="puffFartUnicorL"
         android:text="@string/jeden"
         android:background="@drawable/rainbow_r"
         android:textAlignment="textEnd"
@@ -95,7 +95,7 @@
        style="@style/rainbowButton"
 
 
-        android:onClick="puffFart1Unicor2"
+        android:onClick="puffFartUnicorR"
         android:textAlignment="textStart"
         android:text="@string/jeden"
         android:background="@drawable/rainbow_l"
@@ -115,7 +115,7 @@
         style="@style/rainbowButton"
 
         android:background="@drawable/rainbow_r"
-        android:onClick="puffFart2Unicor1"
+        android:onClick="puffFartUnicorL"
         android:text="@string/dwa"
         android:textAlignment="textEnd"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
@@ -133,7 +133,7 @@
         style="@style/rainbowButton"
 
         android:background="@drawable/rainbow_l"
-        android:onClick="puffFart2Unicor2"
+        android:onClick="puffFartUnicorR"
         android:text="@string/dwa"
         android:textAlignment="textStart"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
