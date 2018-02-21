@@ -8,4 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="rainbowButton" parent="AppTheme">
+
+        <item name="android:fontFamily">@font/rammetto_one</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/countTexttSize</item>
+        <item name="android:includeFontPadding">false</item>
+
+    </style>
 </resources>

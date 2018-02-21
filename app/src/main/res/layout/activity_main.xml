@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,7 +10,7 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/nameUnicornR"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/standardMargins"
@@ -19,12 +20,11 @@
         android:textColor="@color/colorPrimary"
         android:textSize="@dimen/namesTexttSize"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/nameUnicornL"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/nameUnicornL"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/standardMargins"
@@ -33,173 +33,190 @@
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
         android:textSize="@dimen/namesTexttSize"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toStartOf="@+id/nameUnicornR"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/pointsUnicorn1"
+        android:id="@+id/pointsUnicornR"
         android:layout_width="0dp"
-        android:layout_height="75dp"
+        android:layout_height="70dp"
+        android:includeFontPadding="false"
+
         android:fontFamily="@font/rammetto_one"
         android:text="@string/beginCounting"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="@dimen/countTexttSize"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/pointsUnicorn"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toEndOf="@+id/pointsUnicornL"
+        app:layout_constraintTop_toBottomOf="@+id/nameUnicornR" />
 
     <TextView
-        android:id="@+id/pointsUnicorn"
+        android:id="@+id/pointsUnicornL"
+        android:includeFontPadding="false"
+
         android:layout_width="0dp"
-        android:layout_height="75dp"
+        android:layout_height="70dp"
         android:fontFamily="@font/rammetto_one"
         android:text="@string/beginCounting"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="@dimen/countTexttSize"
-        app:layout_constraintEnd_toStartOf="@+id/pointsUnicorn1"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toStartOf="@+id/pointsUnicornR"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/nameUnicornL" />
 
 
     <Button
-        android:id="@+id/addOneToUnicorn1"
-        android:layout_width="105dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/rainbowl"
-        android:fontFamily="@font/rammetto_one"
+        android:id="@+id/addOneToUnicornL"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/standardMargins"
+        android:layout_marginStart="@dimen/standardMargins"
+        style="@style/rainbowButton"
+
         android:onClick="puffFart1Unicor1"
         android:text="@string/jeden"
+        android:background="@drawable/rainbow_r"
         android:textAlignment="textEnd"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="@dimen/countTexttSize"
-        app:layout_constraintEnd_toStartOf="@+id/addOneToUnicorn2"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/addTwoToUnicornL"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintEnd_toStartOf="@+id/addOneToUnicornR"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pointsUnicorn" />
+        app:layout_constraintTop_toBottomOf="@+id/pointsUnicornL" />
 
     <Button
-        android:id="@+id/addOneToUnicorn2"
-        android:layout_width="105dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/rainbow"
-        android:fontFamily="@font/rammetto_one"
-        android:onClick="puffFart1Unicor2"
-        android:text="@string/jeden"
-        android:textAlignment="textStart"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="@dimen/countTexttSize"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/addOneToUnicorn1"
-        app:layout_constraintTop_toBottomOf="@+id/pointsUnicorn1" />
-
-    <Button
-        android:id="@+id/addTwoToUnicorn1"
-        android:layout_width="105dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/rainbowl"
-        android:fontFamily="@font/rammetto_one"
-        android:text="@string/dwa"
-        android:onClick="puffFart2Unicor1"
-        android:textAlignment="textEnd"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="@dimen/countTexttSize"
-        app:layout_constraintEnd_toStartOf="@+id/addTwoToUnicorn2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addOneToUnicorn1" />
-
-    <Button
-        android:id="@+id/addTwoToUnicorn2"
-        android:layout_width="105dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/rainbow"
-        android:fontFamily="@font/rammetto_one"
-        android:gravity="start"
-        android:text="@string/dwa"
-        android:onClick="puffFart2Unicor2"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="@dimen/countTexttSize"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/addTwoToUnicorn1"
-        app:layout_constraintTop_toBottomOf="@+id/addOneToUnicorn2" />
-
-    <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/addOneToUnicornR"
         android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_marginBottom="8dp"
-        android:background="@null"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/standardMargins"
+        android:layout_marginStart="@dimen/standardMargins"
+       style="@style/rainbowButton"
+
+
+        android:onClick="puffFart1Unicor2"
+        android:textAlignment="textStart"
+        android:text="@string/jeden"
+        android:background="@drawable/rainbow_l"
+        app:layout_constraintBottom_toTopOf="@+id/addTwoToUnicornR"
+        app:layout_constraintDimensionRatio="2:1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addOneToUnicornL"
+        app:layout_constraintTop_toBottomOf="@+id/pointsUnicornR"
+        />
+
+    <Button
+        android:id="@+id/addTwoToUnicornL"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/standardMargins"
+        android:layout_marginStart="@dimen/standardMargins"
+        style="@style/rainbowButton"
+
+        android:background="@drawable/rainbow_r"
+        android:onClick="puffFart2Unicor1"
+        android:text="@string/dwa"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintEnd_toStartOf="@+id/addTwoToUnicornR"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/reset"
-        android:onClick="resetBtn"/>
+        app:layout_constraintTop_toBottomOf="@+id/addOneToUnicornL" />
 
+    <Button
+        android:id="@+id/addTwoToUnicornR"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/standardMargins"
+        android:layout_marginStart="@dimen/standardMargins"
+        style="@style/rainbowButton"
 
-    <ImageView
-        android:id="@+id/fart"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-
-        app:layout_constraintBottom_toTopOf="@+id/imageButton3"
-        app:layout_constraintEnd_toStartOf="@+id/fart2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addTwoToUnicorn1"
-        app:srcCompat="@drawable/fart"
-        android:alpha="0"/>
-
-    <ImageView
-        android:id="@+id/fart2"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-
-        app:layout_constraintBottom_toTopOf="@+id/imageButton3"
+        android:background="@drawable/rainbow_l"
+        android:onClick="puffFart2Unicor2"
+        android:text="@string/dwa"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintDimensionRatio="2:1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/fart"
-        app:layout_constraintTop_toBottomOf="@+id/addTwoToUnicorn2"
-        app:srcCompat="@drawable/fart"
-        android:alpha="0"/>
+        app:layout_constraintStart_toEndOf="@+id/addTwoToUnicornL"
+        app:layout_constraintTop_toBottomOf="@+id/addOneToUnicornR" />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55 " />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="154dp"
-        android:layout_height="150dp"
+        android:id="@+id/fartL"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
 
-        app:layout_constraintBottom_toTopOf="@+id/imageButton3"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="@dimen/smallMargins"
+        android:alpha="0"
+        app:layout_constraintBottom_toTopOf="@+id/resetBtn"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/fartR"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addTwoToUnicorn1"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:srcCompat="@drawable/fart" />
+
+    <ImageView
+        android:id="@+id/fartR"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_marginTop="@dimen/smallMargins"
+        android:alpha="0"
+        app:layout_constraintBottom_toTopOf="@+id/resetBtn"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fartL"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:srcCompat="@drawable/fart" />
+
+    <ImageView
+        android:id="@+id/unicornL"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/resetBtn"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/unicornR"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
         app:srcCompat="@drawable/unicorn_l" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:id="@+id/unicornR"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
 
-        app:layout_constraintBottom_toTopOf="@+id/imageButton3"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/resetBtn"
+        app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/addTwoToUnicorn2"
-        app:srcCompat="@drawable/unicorn_p" />
+        app:layout_constraintStart_toEndOf="@+id/unicornL"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:srcCompat="@drawable/unicorn_r" />
+
+    <ImageButton
+        android:id="@+id/resetBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/smallMargins"
+        android:background="@null"
+        android:onClick="resetBtn"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="7:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/reset" />
 
 
 </android.support.constraint.ConstraintLayout>

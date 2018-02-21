@@ -51,15 +51,15 @@ class MainActivity : AppCompatActivity() {
     fun puffFart1Unicor1(view: View) {
 
         pointsForUnorn1++
-        pointsUnicorn.setText(pointsForUnorn1.toString())
-        effects(fart)
+        pointsUnicornL.setText(pointsForUnorn1.toString())
+        effects(fartL)
 
     }
     fun puffFart2Unicor1(view: View) {
 
         pointsForUnorn1 = pointsForUnorn1+2
-        pointsUnicorn.setText(pointsForUnorn1.toString())
-        effects(fart)
+        pointsUnicornL.setText(pointsForUnorn1.toString())
+        effects(fartL)
 
     }
 
@@ -67,16 +67,16 @@ class MainActivity : AppCompatActivity() {
     fun puffFart2Unicor2(view: View) {
 
         pointsForUnorn2 = pointsForUnorn2+2
-        pointsUnicorn1.setText(pointsForUnorn2.toString())
-        effects(fart2)
+        pointsUnicornR.setText(pointsForUnorn2.toString())
+        effects(fartR)
 
     }
 
     fun puffFart1Unicor2(view: View) {
 
         pointsForUnorn2++
-        pointsUnicorn1.setText(pointsForUnorn2.toString())
-        effects(fart2)
+        pointsUnicornR.setText(pointsForUnorn2.toString())
+        effects(fartR)
 
     }
 
@@ -84,8 +84,8 @@ class MainActivity : AppCompatActivity() {
 
         pointsForUnorn2 = 0
         pointsForUnorn1 = 0
-        pointsUnicorn1.setText(pointsForUnorn1.toString())
-        pointsUnicorn.setText(pointsForUnorn2.toString())
+        pointsUnicornR.setText(pointsForUnorn1.toString())
+        pointsUnicornL.setText(pointsForUnorn2.toString())
 
 
     }
